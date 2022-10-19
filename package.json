@@ -1,0 +1,30 @@
+{
+  "name": "what-about-the-scripts",
+  "version": "1.0.0",
+  "description": "Display available npm scripts in package.json",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "watsip": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chkalovec-spec/what-about-the-scripts.git"
+  },
+  "keywords": [
+    "cli",
+    "node",
+    "commander",
+    "scripts",
+    "info"
+  ],
+  "author": "Korev Dmitriy <korev.dmitriy1@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chkalovec-spec/what-about-the-scripts/issues"
+  },
+  "homepage": "https://github.com/chkalovec-spec/what-about-the-scripts#readme"
+}
