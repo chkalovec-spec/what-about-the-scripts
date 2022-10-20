@@ -8,7 +8,7 @@
     "watsip": "./src/index.js"
   },
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node --experimental-json-modules ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/chkalovec-spec/what-about-the-scripts/issues"
   },
-  "homepage": "https://github.com/chkalovec-spec/what-about-the-scripts#readme"
+  "homepage": "https://github.com/chkalovec-spec/what-about-the-scripts#readme",
+  "dependencies": {
+    "commander": "^9.4.1"
+  }
 }
