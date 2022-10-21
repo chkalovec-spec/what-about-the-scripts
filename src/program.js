@@ -1,5 +1,9 @@
 import { program } from 'commander'
 import packageJson from '../package.json' assert { type: 'json' }
+import { getPackageFileData } from './getPackageFileData.js'
+import { getPackagePath } from './getPackagePath.js'
+import { getPackageScrips } from './getPackageScrips.js'
+import { logScripts } from './logScripts.js'
 
 const { bin, description, version } = packageJson
 
@@ -11,7 +15,12 @@ program
 
 export const startProgram = () => {
   program.parse()
-  const path = program.args[0]
+  const argPath = program.args[0]
+  const packagePath = getPackagePath(argPath)
+  const packageFileData = getPackageFileData(packagePath)
+  const scripts = getPackageScrips(packageFileData)
 
-  console.log('program has been started', path)
+  logScripts(scripts)
+
+  process.exit(0)
 }
